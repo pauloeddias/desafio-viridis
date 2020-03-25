@@ -10,7 +10,7 @@ ctest <- read.csv("ctest.csv")
 c_all <- rbind(ctrain,ctest)
 ### Fit the ARIMA model
 arima <- arima(ctrain$data_mean_global, 
-               order=c(0, 2, 1), 
+               order=c(0, 1, 1), 
                seasonal=list(order=c(0,1,1), period=12))
 
 ### Actual versus predicted
